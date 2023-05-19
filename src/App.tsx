@@ -1,5 +1,9 @@
+import useRouteElement from './hooks/useRouteElements'
+
 function App() {
-  return <div className='App'>ticket sale</div>
+  const routeElement = useRouteElement()
+
+  return <div className='App'>{routeElement}</div>
 }
 
 export default App
