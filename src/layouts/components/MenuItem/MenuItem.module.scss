@@ -1,0 +1,61 @@
+.wrapper {
+  --text-opacity: 0.6;
+
+  display: flex;
+  align-items: center;
+  padding: 15px 16px 15px 24px;
+  transition: all linear 0.2s;
+  border-radius: 8px;
+
+  + .wrapper {
+    margin-top: 8px;
+  }
+}
+
+.wrapper.parent {
+  &:hover {
+    color: white;
+    background-color: var(--primary-color);
+  }
+}
+
+.wrapper.child {
+  margin-left: 40px;
+}
+
+.active.parent {
+  color: white;
+  font-weight: 700;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+
+  .icon svg,
+  .title {
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 1;
+    cursor: default;
+  }
+}
+
+.active.child {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 14px;
+  fill: currentColor;
+  opacity: var(--text-opacity);
+}
+
+.title {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  color: currentColor;
+  opacity: var(--text-opacity);
+}

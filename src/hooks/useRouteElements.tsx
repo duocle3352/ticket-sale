@@ -6,6 +6,10 @@ import { DefaultLayout } from '~/layouts/DefaultLayout'
 import { NoneLayout } from '~/layouts/NoneLayout'
 import { HomePage } from '~/pages/HomePage'
 import { LoginPage } from '~/pages/LoginPage'
+import { ProfilePage } from '~/pages/ProfilePage'
+import { ManagePage } from '~/pages/ManagePage'
+import { CheckPage } from '~/pages/CheckPage'
+import { SettingPackagePage } from '~/pages/SettingPackagePage'
 import { RootState } from '~/redux/store'
 
 const ProtectedRoute = () => {
@@ -31,9 +35,50 @@ const useRouteElement = () => {
       children: [
         {
           path: routes.home,
+          index: true,
           element: (
             <DefaultLayout>
               <HomePage />
+            </DefaultLayout>
+          )
+        },
+        {
+          path: routes.profile,
+          element: (
+            <DefaultLayout>
+              <ProfilePage />
+            </DefaultLayout>
+          )
+        },
+        {
+          path: routes.manage,
+          element: (
+            <DefaultLayout>
+              <ManagePage />
+            </DefaultLayout>
+          )
+        },
+        {
+          path: routes.check,
+          element: (
+            <DefaultLayout>
+              <CheckPage />
+            </DefaultLayout>
+          )
+        },
+        {
+          path: routes.setting,
+          element: (
+            <DefaultLayout>
+              <SettingPackagePage />
+            </DefaultLayout>
+          )
+        },
+        {
+          path: routes.setting_package,
+          element: (
+            <DefaultLayout>
+              <SettingPackagePage />
             </DefaultLayout>
           )
         }

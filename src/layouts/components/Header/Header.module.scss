@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  flex-grow: 0;
+}
+
+.tool-item {
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: currentColor;
+  }
+
+  &:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+}
+
+.user {
+  display: block;
+  width: 48px;
+  border-radius: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 100%;
+}

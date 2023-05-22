@@ -1,5 +1,6 @@
 @import 'normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+@import './LayoutStyle.scss';
 
 :root {
   --font-family: 'Montserrat', sans-serif;
@@ -30,22 +31,6 @@ body {
   color: var(--text-color);
   background-color: var(--app-bg-color);
   user-select: none;
-}
-
-.App {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.layout-wrapper {
-  width: 1440px;
-  height: 730px;
-  border-radius: 24px;
-  background-color: #f9f6f4;
-  box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
-  overflow: hidden;
 }
 
 a {
