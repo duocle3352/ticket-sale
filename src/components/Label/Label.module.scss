@@ -1,0 +1,14 @@
+.label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.require {
+  color: var(--red-color);
+}

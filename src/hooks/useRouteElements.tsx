@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux/es/hooks/useSelector'
 
 import routes from '~/configs/routes'
 import { DefaultLayout } from '~/layouts/DefaultLayout'
+import { NoneLayout } from '~/layouts/NoneLayout'
 import { HomePage } from '~/pages/HomePage'
 import { LoginPage } from '~/pages/LoginPage'
 import { RootState } from '~/redux/store'
@@ -44,7 +45,11 @@ const useRouteElement = () => {
       children: [
         {
           path: routes.login,
-          element: <LoginPage />
+          element: (
+            <NoneLayout>
+              <LoginPage />
+            </NoneLayout>
+          )
         }
       ]
     }
