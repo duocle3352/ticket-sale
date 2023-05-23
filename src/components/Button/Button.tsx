@@ -7,6 +7,7 @@ const cx = classNames.bind(style)
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   outline?: boolean
   large?: boolean
+  disabled?: boolean
   leftIcon?: React.ReactElement
   rightIcon?: React.ReactElement
 }
@@ -16,12 +17,13 @@ function Button({
   leftIcon,
   rightIcon,
   outline,
+  disabled,
   large,
   className,
   onClick,
   ...rest
 }: Props) {
-  const classes = cx('wrapper', { outline, large }, className)
+  const classes = cx('wrapper', { outline, large, disabled }, className)
 
   return (
     <button className={classes} onClick={onClick} {...rest}>

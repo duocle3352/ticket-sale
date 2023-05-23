@@ -22,3 +22,10 @@ export const confirmPasswordSchema = authSchema.omit(['email'])
 export type LoginForm = yup.InferType<typeof loginSchema>
 export type ForgotPasswordForm = yup.InferType<typeof forgotPasswordSchema>
 export type ConfirmPasswordForm = yup.InferType<typeof confirmPasswordSchema>
+
+export const ticketSchema = yup.object({
+  packageName: yup.string().required('Vui lòng nhập trường này'),
+  type: yup.string().required('Vui lòng nhập trường này'),
+  gate: yup.string().required('Vui lòng nhập trường này'),
+  statusMessage: yup.string().required('Vui lòng nhập trường này')
+})

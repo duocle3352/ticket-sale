@@ -1,0 +1,23 @@
+.container {
+  width: 540px;
+  margin-top: 40px;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+}
+
+.block + .block {
+  margin-top: 20px;
+}
+
+.label {
+  width: 120px;
+}
+
+.block__btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}

@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
-import authenticateReducer from './authenticateSlice'
 import { useDispatch } from 'react-redux'
+import authenticateReducer from './authenticateSlice'
+import manageTicketReducer from './manageTicketSlice'
 
 const store = configureStore({
   reducer: {
-    authenticate: authenticateReducer
+    authenticate: authenticateReducer,
+    manage: manageTicketReducer
   }
 })
 

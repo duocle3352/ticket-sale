@@ -1,0 +1,35 @@
+.wrapper {
+  height: 40px;
+  min-width: 200px;
+  color: var(--text-color);
+  background-color: white;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  font-weight: 400;
+  border: 1.5px solid var(--border-color);
+  border-radius: 8px;
+  padding: 7px 12px;
+  margin-bottom: 4px;
+  overflow: hidden;
+  outline: none;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  height: 21px;
+  color: #e73f3f;
+}
+
+.error-icon {
+  color: currentColor;
+  width: 21px;
+  height: 21px;
+}
+
+.error-massage {
+  color: currentColor;
+  font-size: 1.4rem;
+}

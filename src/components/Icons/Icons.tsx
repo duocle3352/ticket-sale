@@ -188,3 +188,96 @@ export const CalendarIcon = ({ className }: Props) => {
     </svg>
   )
 }
+
+export const SearchIcon = ({ className }: Props) => (
+  <svg viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg' className={className}>
+    <path
+      d='M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z'
+      stroke='currentColor'
+      strokeWidth='2'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+    />
+    <path
+      d='M17.5 17.5L13.875 13.875'
+      stroke='currentColor'
+      strokeWidth='2'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+    />
+  </svg>
+)
+
+export const FilterIcon = ({ className }: Props) => (
+  <svg viewBox='0 0 22 20' fill='none' xmlns='http://www.w3.org/2000/svg' className={className}>
+    <path
+      d='M21 1H1L9 10.46V17L13 19V10.46L21 1Z'
+      stroke='currentColor'
+      strokeWidth='2'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+    />
+  </svg>
+)
+
+export const ChevronLeftIcon = ({ className }: Props) => {
+  return (
+    <svg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' className={className}>
+      <path d='M15 7L9 12L15 17' fill='currentColor' />
+      <path
+        d='M15 7L9 12L15 17L15 7Z'
+        stroke='currentColor'
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </svg>
+  )
+}
+
+export const ChevronRightIcon = ({ className }: Props) => {
+  return (
+    <svg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' className={className}>
+      <path d='M9 17L15 12L9 7' fill='currentColor' />
+      <path
+        d='M9 17L15 12L9 7L9 17Z'
+        stroke='currentColor'
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </svg>
+  )
+}
+
+export const DotIcon = ({ className }: Props) => {
+  return (
+    <svg
+      width='8'
+      height='9'
+      viewBox='0 0 8 9'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      className={className}
+    >
+      <circle cx='4' cy='4.5' r='4' fill='currentColor' />
+    </svg>
+  )
+}
+
+export const MoreIcon = ({ className }: Props) => (
+  <svg
+    width='4'
+    height='18'
+    viewBox='0 0 4 18'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+  >
+    <path
+      opacity='0.7'
+      d='M2 4C2.39556 4 2.78224 3.8827 3.11114 3.66294C3.44004 3.44318 3.69639 3.13082 3.84776 2.76537C3.99914 2.39992 4.03874 1.99778 3.96157 1.60982C3.8844 1.22186 3.69392 0.865492 3.41421 0.585787C3.13451 0.306082 2.77814 0.115601 2.39018 0.0384303C2.00222 -0.0387401 1.60009 0.000866562 1.23463 0.152242C0.869182 0.303617 0.556825 0.559962 0.337062 0.88886C0.117299 1.21776 1.07779e-06 1.60444 1.07779e-06 2C1.07779e-06 2.53043 0.210715 3.03914 0.585788 3.41421C0.960861 3.78929 1.46957 4 2 4ZM2 14C1.60444 14 1.21776 14.1173 0.888861 14.3371C0.559963 14.5568 0.303617 14.8692 0.152242 15.2346C0.000866562 15.6001 -0.0387401 16.0022 0.0384303 16.3902C0.115601 16.7781 0.306083 17.1345 0.585788 17.4142C0.865493 17.6939 1.22186 17.8844 1.60982 17.9616C1.99778 18.0387 2.39992 17.9991 2.76537 17.8478C3.13082 17.6964 3.44318 17.44 3.66294 17.1111C3.8827 16.7822 4 16.3956 4 16C4 15.4696 3.78929 14.9609 3.41421 14.5858C3.03914 14.2107 2.53043 14 2 14ZM2 7C1.60444 7 1.21776 7.1173 0.888861 7.33706C0.559963 7.55682 0.303617 7.86918 0.152242 8.23463C0.000866562 8.60009 -0.0387401 9.00222 0.0384303 9.39018C0.115601 9.77814 0.306083 10.1345 0.585788 10.4142C0.865493 10.6939 1.22186 10.8844 1.60982 10.9616C1.99778 11.0387 2.39992 10.9991 2.76537 10.8478C3.13082 10.6964 3.44318 10.44 3.66294 10.1111C3.8827 9.78224 4 9.39556 4 9C4 8.46957 3.78929 7.96086 3.41421 7.58579C3.03914 7.21071 2.53043 7 2 7Z'
+      fill='#1E0D03'
+    />
+  </svg>
+)

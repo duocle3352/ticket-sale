@@ -1,0 +1,11 @@
+.wrapper {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  font-weight: 400;
+  color: var(--gray-color-300);
+
+  span {
+    color: var(--red-color);
+    margin-right: 4px;
+  }
+}

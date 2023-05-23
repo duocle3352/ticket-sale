@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 600;
+  color: #7e7d88;
+}
+
+.disable {
+  color: #a9a9b0;
+  cursor: not-allowed;
+}
+
+.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,26 @@
+.event-name {
+  position: relative;
+  width: 200px;
+  line-height: 49px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.NO {
+  text-align: center;
+}
+
+.popup {
+  color: var(--text-color);
+  background: #fff2e7;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.update {
+  cursor: pointer;
+}
