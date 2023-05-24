@@ -6,11 +6,13 @@ import TicketType from '~/types/TicketType'
 interface Types {
   updateItem: TicketType | null
   isAddTicket: boolean
+  isFilterTicket: boolean
 }
 
 const initialState: Types = {
   updateItem: null,
-  isAddTicket: false
+  isAddTicket: false,
+  isFilterTicket: false
 }
 
 export const addTicket = createAsyncThunk('ticket/addTicket', async (formAdd: TicketType) => {
@@ -43,6 +45,12 @@ const manageTicketSlice = createSlice({
     },
     cancelUpdate: (state) => {
       state.updateItem = null
+    },
+    startFilter: (state) => {
+      state.isFilterTicket = true
+    },
+    cancelFilter: (state) => {
+      state.isFilterTicket = false
     }
   },
   extraReducers: (builder) => {
@@ -57,5 +65,5 @@ const manageTicketSlice = createSlice({
 })
 
 const { actions, reducer } = manageTicketSlice
-export const { startAdd, cancelAdd, startUpdate, cancelUpdate } = actions
+export const { startAdd, cancelAdd, startUpdate, cancelUpdate, cancelFilter, startFilter } = actions
 export default reducer

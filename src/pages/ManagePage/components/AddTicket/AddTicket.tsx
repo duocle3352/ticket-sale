@@ -78,7 +78,7 @@ function AddTicket() {
     <Modal title='Thêm vé'>
       <form className={cx('container')} onSubmit={onSubmit}>
         <div>
-          <Label require label='Tên gói vé' />
+          <Label require label='Tên gói vé' className={cx('label')} />
           <Select
             name='packageName'
             options={listPackage}
@@ -91,7 +91,7 @@ function AddTicket() {
 
         <div className={cx('group')}>
           <div className={cx('item')}>
-            <Label require label='Loại vé' />
+            <Label require label='Loại vé' className={cx('label')} />
             <Select
               name='type'
               options={ticketType}
@@ -101,7 +101,7 @@ function AddTicket() {
             />
           </div>
           <div className={cx('item')}>
-            <Label require label='Cổng check - in' />
+            <Label require label='Cổng check - in' className={cx('label')} />
             <Select
               name='gate'
               options={gates}
@@ -113,7 +113,7 @@ function AddTicket() {
         </div>
         {/* use status */}
         <div className={cx('single-ele')}>
-          <Label require label='Tình trạng sử dụng' />
+          <Label require label='Tình trạng sử dụng' className={cx('label')} />
           <Select
             name='statusMessage'
             options={status}
@@ -125,7 +125,7 @@ function AddTicket() {
         {/* date */}
         <div className={cx('group')}>
           <div className={cx('item')}>
-            <Label require label='Ngày sử dụng' />
+            <Label require label='Ngày sử dụng' className={cx('label')} />
             <CalenderPicker
               formatDate='dd/MM/yyy'
               selectedDate={applyDate}
@@ -134,7 +134,7 @@ function AddTicket() {
             />
           </div>
           <div className={cx('item')}>
-            <Label require label='Ngày xuất vé' />
+            <Label require label='Ngày xuất vé' className={cx('label')} />
             <CalenderPicker
               formatDate='dd/MM/yyy'
               selectedDate={useDate}

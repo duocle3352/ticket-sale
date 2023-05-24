@@ -1,18 +1,32 @@
 .container {
-  width: 700px;
+  width: 634px;
   display: flex;
   flex-direction: column;
   gap: 6px;
   margin-top: 40px;
 }
 
-.select-package {
-  width: 500px;
-}
-
 .group {
   display: flex;
+  margin-bottom: 10px;
+}
+
+.group.group__2 {
   gap: 150px;
+}
+
+.group.group__4 {
+  justify-content: space-between;
+}
+
+.group.group__6 {
+  flex-wrap: wrap;
+
+  .item {
+    width: 33.33333%;
+    flex: none;
+    margin: 10px 0;
+  }
 }
 
 .label {
