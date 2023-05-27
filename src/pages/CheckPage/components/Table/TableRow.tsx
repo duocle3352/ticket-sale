@@ -4,9 +4,7 @@ import { useFloating, FloatingPortal, useInteractions, useHover } from '@floatin
 
 import formatDate from '~/util/formatDate'
 import { useAppDispatch } from '~/redux/store'
-import { startUpdate } from '~/redux/manageTicketSlice'
-import { StatusTag } from '~/components/StatusTag'
-import { MoreIcon } from '~/components/Icons'
+import { startCheck } from '~/redux/manageTicketSlice'
 import TicketType from '~/types/TicketType'
 import styles from './Table.module.scss'
 
@@ -24,14 +22,13 @@ function TableRow({ ticket, index }: { ticket: TicketType; index: number }) {
   const hover = useHover(context)
   const { getReferenceProps, getFloatingProps } = useInteractions([hover])
 
-  const handleStartUpdateTicket = () => {
-    dispatch(startUpdate(ticket))
+  const handleCheckTicket = () => {
+    dispatch(startCheck(ticket))
   }
 
   return (
     <tr className='table-row'>
       <td className='table-col center-row'>{index + 1}</td>
-      <td className='table-col'>{ticket.id.slice(0, 8)}</td>
       <td className='table-col'>{ticket.id.slice(0, 8)}</td>
       <td
         className={cx('event-name', 'table-col')}
@@ -52,14 +49,14 @@ function TableRow({ ticket, index }: { ticket: TicketType; index: number }) {
           </FloatingPortal>
         )}
       </td>
-      <td className='table-col'>
-        <StatusTag statusMessage={ticket.statusMessage} />
-      </td>
-      <td className='table-col'>{formatDate(ticket.useDate)}</td>
       <td className='table-col'>{formatDate(ticket.applyDate)}</td>
+      <td className='table-col'>{ticket.type}</td>
       <td className='table-col center-row'>{ticket.gate}</td>
-      <td className={cx('update', 'table-col')} onClick={() => handleStartUpdateTicket()}>
-        <MoreIcon />
+      <td
+        className={cx('table-col', 'table-btn', { checked: ticket.checkStatus === 'Đã đối soát' })}
+        onClick={handleCheckTicket}
+      >
+        {ticket.checkStatus}
       </td>
     </tr>
   )

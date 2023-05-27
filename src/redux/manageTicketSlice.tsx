@@ -5,12 +5,14 @@ import TicketType from '~/types/TicketType'
 
 interface Types {
   updateItem: TicketType | null
+  checkItem: TicketType | null
   isAddTicket: boolean
   isFilterTicket: boolean
 }
 
 const initialState: Types = {
   updateItem: null,
+  checkItem: null,
   isAddTicket: false,
   isFilterTicket: false
 }
@@ -26,6 +28,16 @@ export const updateDateTicket = createAsyncThunk(
     const ref = doc(db, 'tickets', formUpdate.id)
     await updateDoc(ref, {
       useDate: formUpdate.updateDate
+    })
+  }
+)
+
+export const checkTicket = createAsyncThunk(
+  'ticket/checkTicket',
+  async (formUpdate: { id: string; checkStatus: string }) => {
+    const ref = doc(db, 'tickets', formUpdate.id)
+    await updateDoc(ref, {
+      checkStatus: formUpdate.checkStatus
     })
   }
 )
@@ -51,6 +63,12 @@ const manageTicketSlice = createSlice({
     },
     cancelFilter: (state) => {
       state.isFilterTicket = false
+    },
+    startCheck: (state, actions: PayloadAction<TicketType>) => {
+      state.checkItem = actions.payload
+    },
+    cancelCheck: (state) => {
+      state.checkItem = null
     }
   },
   extraReducers: (builder) => {
@@ -61,9 +79,21 @@ const manageTicketSlice = createSlice({
       .addCase(addTicket.fulfilled, () => {
         console.log('success')
       })
+      .addCase(checkTicket.fulfilled, () => {
+        console.log('success')
+      })
   }
 })
 
 const { actions, reducer } = manageTicketSlice
-export const { startAdd, cancelAdd, startUpdate, cancelUpdate, cancelFilter, startFilter } = actions
+export const {
+  startAdd,
+  cancelAdd,
+  startUpdate,
+  cancelUpdate,
+  cancelFilter,
+  startFilter,
+  cancelCheck,
+  startCheck
+} = actions
 export default reducer

@@ -1,0 +1,39 @@
+.wrapper {
+  width: 286px;
+}
+
+.title {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.item {
+  margin-bottom: 20px;
+}
+
+.item_inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label {
+  margin-bottom: 10px;
+}
+
+.select-package {
+  width: 100%;
+}
+
+.check {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.submit-btn {
+  display: flex;
+  justify-content: center;
+}
