@@ -56,6 +56,7 @@ function LoginPage() {
             <Input
               name='email'
               type='email'
+              value={'duoc.le@gmail.com'}
               placeholder='Email'
               errorMessage={errors.email?.message}
               register={register}
@@ -66,6 +67,7 @@ function LoginPage() {
             <Input
               name='password'
               type='password'
+              value={'123456'}
               placeholder='Mật khẩu'
               errorMessage={errors.password?.message}
               register={register}
