@@ -16,6 +16,7 @@ import { RequireTag } from '~/components/RequireTag'
 import { Select } from '~/components/Select'
 import TicketType from '~/types/TicketType'
 import styles from './AddTicket.module.scss'
+import PackageType from '~/types/PackageType'
 
 const cx = classNames.bind(styles)
 
@@ -41,7 +42,7 @@ function AddTicket() {
   const onSubmit = handleSubmit(async (data) => {
     const formData: TicketType = {
       ...data,
-      id: today.getTime().toString(),
+      id: today.getTime(),
       checkStatus: 'Chưa đối soát',
       applyDate: (applyDate as Date).getTime(),
       useDate: (useDate as Date).getTime()
@@ -62,9 +63,11 @@ function AddTicket() {
       const listPackageName: string[] = []
       const querySnapshot = await getDocs(collection(db, 'packages'))
       querySnapshot.forEach((doc) => {
-        const packageName: string = doc.data().name
+        const packageItem: PackageType = doc.data() as PackageType
+        const packageName: string = packageItem.name
         const isHaveName = listPackageName.includes(packageName)
-        if (!isHaveName) {
+        const isApplying = packageItem.statusMessage === 'Đang áp dụng'
+        if (!isHaveName && isApplying) {
           listPackageName.push(packageName)
         }
       })
@@ -125,7 +128,7 @@ function AddTicket() {
         {/* date */}
         <div className={cx('group')}>
           <div className={cx('item')}>
-            <Label require label='Ngày sử dụng' className={cx('label')} />
+            <Label require label='Ngày xuất vé' className={cx('label')} />
             <CalenderPicker
               formatDate='dd/MM/yyy'
               selectedDate={applyDate}
@@ -134,7 +137,7 @@ function AddTicket() {
             />
           </div>
           <div className={cx('item')}>
-            <Label require label='Ngày xuất vé' className={cx('label')} />
+            <Label require label='Hạn sử dụng' className={cx('label')} />
             <CalenderPicker
               formatDate='dd/MM/yyy'
               selectedDate={useDate}

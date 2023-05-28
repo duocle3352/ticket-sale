@@ -18,14 +18,14 @@ const initialState: Types = {
 }
 
 export const addTicket = createAsyncThunk('ticket/addTicket', async (formAdd: TicketType) => {
-  const ref = doc(db, 'tickets', formAdd.id)
+  const ref = doc(db, 'tickets', formAdd.id.toString())
   await setDoc(ref, formAdd)
 })
 
 export const updateDateTicket = createAsyncThunk(
   'ticket/updateTicket',
-  async (formUpdate: { id: string; updateDate: number }) => {
-    const ref = doc(db, 'tickets', formUpdate.id)
+  async (formUpdate: { id: number; updateDate: number }) => {
+    const ref = doc(db, 'tickets', formUpdate.id.toString())
     await updateDoc(ref, {
       useDate: formUpdate.updateDate
     })
@@ -34,8 +34,8 @@ export const updateDateTicket = createAsyncThunk(
 
 export const checkTicket = createAsyncThunk(
   'ticket/checkTicket',
-  async (formUpdate: { id: string; checkStatus: string }) => {
-    const ref = doc(db, 'tickets', formUpdate.id)
+  async (formUpdate: { id: number; checkStatus: string }) => {
+    const ref = doc(db, 'tickets', formUpdate.id.toString())
     await updateDoc(ref, {
       checkStatus: formUpdate.checkStatus
     })

@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind'
 import { useEffect, useState } from 'react'
-import { collection, onSnapshot, query, where } from 'firebase/firestore'
+import { collection, onSnapshot, orderBy, query, where } from 'firebase/firestore'
 import { useSelector } from 'react-redux'
 import { CSVLink } from 'react-csv'
 
@@ -77,6 +77,7 @@ function ManagePage() {
     const ticketRef = collection(db, 'tickets')
     const q = query(
       ticketRef,
+      orderBy('applyDate', 'desc'),
       statusQuery(status),
       gatesQuery(gates),
       startDateQuery(startDate),

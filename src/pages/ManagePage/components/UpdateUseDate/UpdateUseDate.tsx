@@ -22,7 +22,7 @@ function UpdateUseDate() {
   const [isUpdating, setIsUpdating] = useState<boolean>(false)
 
   const handleUpdate = async () => {
-    const data: { id: string; updateDate: number } = {
+    const data: { id: number; updateDate: number } = {
       id: updateItem.id,
       updateDate: new Date(selectDate as Date).getTime()
     }

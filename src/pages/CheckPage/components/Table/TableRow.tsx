@@ -29,7 +29,7 @@ function TableRow({ ticket, index }: { ticket: TicketType; index: number }) {
   return (
     <tr className='table-row'>
       <td className='table-col center-row'>{index + 1}</td>
-      <td className='table-col'>{ticket.id.slice(0, 8)}</td>
+      <td className='table-col'>{ticket.id}</td>
       <td
         className={cx('event-name', 'table-col')}
         ref={refs.setReference}
