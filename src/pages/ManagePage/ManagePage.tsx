@@ -105,7 +105,7 @@ function ManagePage() {
   }
 
   return (
-    <PageWrapper className={cx('wrapper')}>
+    <PageWrapper>
       <PageTitle title='Danh sách vé' />
       <div className={cx('tool')}>
         <Search
