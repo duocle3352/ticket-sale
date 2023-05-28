@@ -1,12 +1,10 @@
 export default interface PackageType {
-  id: string
-  applyDate: string
-  applyTime: string
+  id: number
+  applyDate: number
   comboPrice?: string
   comboQuantity?: string
-  expirationDate: string
-  expirationTime: string
+  expirationDate: number
   name: string
-  price: string
+  price?: string
   statusMessage: 'Đang áp dụng' | 'Tắt'
 }

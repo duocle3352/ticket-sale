@@ -1,0 +1,54 @@
+.container {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 40px;
+}
+
+.group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.check-group {
+  margin-bottom: 20px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.label {
+  margin-bottom: 10px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-item + .checkbox-item {
+  margin-top: 10px;
+}
+
+.price-check {
+  width: 24px;
+  height: 24px;
+  flex-grow: 0;
+}
+
+.price-input {
+  width: 150px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: var(--text-color);
+  background-color: #f1f4f8;
+  padding: 10px 12px;
+  border-radius: 8px;
+}

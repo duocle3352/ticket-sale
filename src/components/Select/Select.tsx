@@ -18,13 +18,14 @@ function Select({
   name,
   className,
   options,
+  value,
   placeholder,
   errorMessage,
   rules,
   register,
   ...passProps
 }: Props) {
-  const registerResult = register && name ? register(name, { ...rules }) : {}
+  const registerResult = register && name ? register(name, { ...rules, value }) : {}
 
   return (
     <>

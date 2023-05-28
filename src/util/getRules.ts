@@ -29,3 +29,8 @@ export const ticketSchema = yup.object({
   gate: yup.string().required('Vui lòng nhập trường này'),
   statusMessage: yup.string().required('Vui lòng nhập trường này')
 })
+
+export const packageSchema = yup.object({
+  name: yup.string().required('Vui lòng nhập trường này'),
+  statusMessage: yup.string().required('Vui lòng nhập trường này')
+})
